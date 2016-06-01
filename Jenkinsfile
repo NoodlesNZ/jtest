@@ -3,5 +3,5 @@ node {
 		checkout scm
 		
 	stage 'Build'
-		ant ''
+		sh 'ant'
 }
