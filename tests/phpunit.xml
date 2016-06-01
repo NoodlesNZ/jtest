@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/5.1/phpunit.xsd"
+  bootstrap="./bootstrap.php">
+  
+  <testsuite name="DDC">
+    <directory suffix="Test.php">unit</directory>
+  </testsuite>
+  
+  <logging>
+    <log type="coverage-html" target="../build/coverage"/>
+  </logging>
+  
+  <filter>
+    <whitelist>
+      <directory suffix=".php">../public_html/include/</directory>
+      <directory suffix=".php">../public_html/mednotes/class/</directory>
+      <exclude>
+        <directory>../public_html/include/magpierss/</directory>
+        <directory>../public_html/include/template/</directory>
+        <file>../public_html/include/geoip.php</file>
+        <file>../public_html/include/recaptchalib.php</file>
+      </exclude>
+    </whitelist>
+  </filter>
+</phpunit>
